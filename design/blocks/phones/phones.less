@@ -1,34 +1,93 @@
 .phones {
   @block: ~".phones";
 
-  .bg-block("phone.png"; @pos-y: center);
-  padding-left: 16px;
-  .v-middle();
-
-  &__item {
-    padding-right: 10px;
-    margin-right: 10px;
-    border-right: 1px solid @color1;
-    display: inline-block;
-    white-space: nowrap;
+  &__list {
+    list-style: none;
   }
 
-  &__item:last-child {
-    padding-right: 0;
-    margin-right: 0;
-    border-right: 0;
-  }
+  &_def {
+    .bg-block("phone.png"; @pos-y: center);
+    padding-left: 16px;
+    .v-middle();
 
-  &__link {
-    color: #FFF;
-  }
+    @{block}__item {
+      padding-right: 10px;
+      margin-right: 10px;
+      display: inline-block;
+      white-space: nowrap;
+    }
 
-  &__link:hover {
-    color: #FFF;
+    @{block}__item:last-child {
+      padding-right: 0;
+      margin-right: 0;
+      border-right: 0;
+    }
+
+    @{block}__link {
+      color: #FFF;
+    }
+
+    @{block}__link:hover {
+      color: #FFF;
+    }
+
+    @{block}__menu {
+      display: none;
+    }
+
+    @{block}__notes {
+      display: none;
+    }
   }
 
   &_xs {
 
+    @{block}__menu {
+      display: block;
+      .bg-block("icon-call.png"; @pos-x: center; @pos-y: center);
+      .size(100%);
+      cursor: pointer;
+    }
+
+    @{block}__list {
+      position: absolute;
+      display: none;
+      top: 100%;
+      margin-top: -2px;
+      left: 0;
+      background: #FFF;
+      .box-shadow(-2px 2px 10px #AAA);
+      width: 240%;
+      padding: 10px;
+      z-index: 10;
+    }
+
+    &@{block}_open @{block}__list {
+      display: block;
+    }
+
+    &@{block}_open @{block}__menu {
+      background-color: @color1;
+    }
+
+    @{block}__item {
+      width: 100%;
+      padding: 10px 0;
+      text-align: center;
+    }
+
+    @{block}__link, @{block}__link:hover {
+      color: @font-color;
+      font-size: 1.8rem;
+      font-weight: bold;
+    }
+
+    @{block}__notes {
+      width: 100%;
+      margin: 10px 0;
+      text-align: center;
+      font-size: 1.4rem;
+    }
   }
 
 // auto-generated MODIFIERS start (15.09.2017 15:35)

@@ -25,6 +25,63 @@ Block.prototype.be = function(sName) {
     return this.element_prefix + sName;
 }
 
+/* open / hide */
+Block.prototype.init_open_hide = function () {
+
+    var _ = this;
+    $(_.block_selector + ' [data-toggle-btn]').bind("click", function (event) {
+        //event.preventDefault();
+        _.toggle();
+    });
+
+    $("body").bind("click", function (event) {
+        if ($(event.target).closest(_.block_selector).length == 0) {
+            _.hide();
+        }
+    });
+};
+
+Block.prototype.open = function () {
+    this.getBlock().addClass(this.block+'_open');
+    return this;
+};
+
+Block.prototype.hide = function () {
+    this.getBlock().removeClass(this.block+'_open');
+    return this;
+};
+
+Block.prototype.toggle = function () {
+    var sClassOpen = this.block+'_open';
+    if (this.getBlock().hasClass(sClassOpen)) {
+        this.hide();
+    }
+    else {
+        this.open();
+    }
+
+    return this;
+};
+
+/* utilities */
+Block.prototype.setIds = function() {
+    var _ = this;
+
+    _.getBlock(':not([id])').each(function(idx, el) {
+
+        var id;
+        var cnt = idx;
+        do {
+            id = _.block + cnt;
+            cnt++;
+        }
+        while (_.getBlock('[id="'+id+'"]').length>0);
+
+        $(el).attr('id', id);
+    });
+
+};
+
 function isMobile()
 {
     if (!($(window).width() >= 768 || $.cookie('is_full_version')==1)) {

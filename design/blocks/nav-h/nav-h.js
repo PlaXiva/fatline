@@ -1,28 +1,20 @@
 $(document).ready(function() {
-    nav_h__bind();
+    blockNav_h.init();
 });
 
-function nav_h__bind()
+function BlockNav_h ()
 {
-    $(".nav-h__menu").bind("click", function (event) {
-        //event.preventDefault();
-
-        var nav = $(this).closest('.nav-h');
-        var list = $(nav).find('.nav-h__list').first();
-
-        if ($(list).hasClass('nav-h__list_open')) {
-            $(list).removeClass('nav-h__list_open');
-        }
-        else {
-            $(list).addClass('nav-h__list_open');
-        }
-    });
-
-    $("body").bind("click", function (event) {
-
-        if ($(event.target).closest('.nav-h').length == 0) {
-            $('.nav-h__list').removeClass('nav-h__list_open');
-        }
-
-    });
+    Block.apply(this, arguments);
 }
+
+BlockNav_h.prototype = Object.create(Block.prototype);
+BlockNav_h.prototype.constructor = BlockNav_h;
+
+BlockNav_h.prototype.init = function() {
+    var _ = this;
+
+    _.init_open_hide();
+    return true;
+};
+
+var blockNav_h = new BlockNav_h('.nav-h_xs', 'nav-h');

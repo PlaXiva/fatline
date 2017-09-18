@@ -55,13 +55,14 @@
       border: 1px solid rgba(0,0,0,.15);
       .box-shadow(0 6px 12px rgba(0,0,0,.175));
       height: auto;
+      z-index: 10;
 
       &::before {
         display: none;
       }
     }
 
-    @{block}__list_open {
+    &@{block}_open @{block}__list {
       display: block;
     }
 

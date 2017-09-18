@@ -1,42 +1,46 @@
 <div class="{$class}">
-    <p class="__popular">
-        <span class="__popular-title">Популярные запросы</span>
-        <a href="" class="__popular-item">Фамилия и номер</a>
-        <a href="" class="__popular-item">Парные футболки</a>
-        <a href="" class="__popular-item">Реглан с голограммой</a>
-        <a href="" class="__popular-item">Футболка без рисунка</a>
-        <a href="" class="__popular-item">Футболка без рисунка</a>
-        <a href="" class="__popular-item">Футболка без рисунка</a>
-    </p>
+    <span class="__toggle-btn" data-toggle-btn></span>
 
-    <form action="#" method="post" class="__form">
-        <input type="search" name="query" value="" placeholder="Например, Украина" class="__input" autocomplete="off"/>
-        <span class="__clear"></span>
-        <block class="button button_lg button_nob __button" param="Поиск"></block>
-    </form>
-    
-    <div class="__results">
-        <a class="__result" href="./category.html">
-            <p class="__result-theme"><span class="__result-theme-search">super</span> в разделе <span class="__result-theme-name">Superman</span></p>
-        </a>
+    <div class="__toggle-data">
+        <p class="__popular">
+            <span class="__popular-title">Популярные запросы</span>
+            <a href="" class="__popular-item">Фамилия и номер</a>
+            <a href="" class="__popular-item">Парные футболки</a>
+            <a href="" class="__popular-item">Реглан с голограммой</a>
+            <a href="" class="__popular-item">Футболка без рисунка</a>
+            <a href="" class="__popular-item">Футболка без рисунка</a>
+            <a href="" class="__popular-item">Футболка без рисунка</a>
+        </p>
 
-        <a class="__result __result_prod" href="./product.html">
-            <div class="__result-prod-pic">
-                <img src="{$url}imgs/prod.png" alt="prod" width="245" height="245" class="__result-prod-img">
-            </div>
-            <div class="__result-prod-info">
-                <p class="__result-prod-title">Футболка Супер дедушка</p>
-                <p class="__result-prod-price">254 грн.</p>
-            </div>
-        </a>
+        <form action="#" method="post" class="__form">
+            <input type="search" name="query" value="" placeholder="Например, Украина" class="__input" autocomplete="off"/>
+            <span class="__clear"></span>
+            <block class="button button_lg button_nob __button" param="Поиск"></block>
+        </form>
 
-        <a class="__result" href="./category.html">
-            <p class="__result-all">Все результаты поиска →</p>
-        </a>
+        <div class="__results">
+            <a class="__result" href="./category.html">
+                <p class="__result-theme"><span class="__result-theme-search">super</span> в разделе <span class="__result-theme-name">Superman</span></p>
+            </a>
 
-        <a class="__result __result_none" href="./constructor.html">
-            <p class="__result-none">По вашему запросу ничего не найдено.</p>
-            <p class="__result-cons"><span class="__result-cons-text">Создайте свой уникальный товар →</span><span class="__result-cons-link">перейти в Конструктор</span></p>
-        </a>
+            <a class="__result __result_prod" href="./product.html">
+                <div class="__result-prod-pic">
+                    <img src="{$url}imgs/prod.png" alt="prod" width="245" height="245" class="__result-prod-img">
+                </div>
+                <div class="__result-prod-info">
+                    <p class="__result-prod-title">Футболка Супер дедушка</p>
+                    <p class="__result-prod-price">254 грн.</p>
+                </div>
+            </a>
+
+            <a class="__result" href="./category.html">
+                <p class="__result-all">Все результаты поиска →</p>
+            </a>
+
+            <a class="__result __result_none" href="./constructor.html">
+                <p class="__result-none">По вашему запросу ничего не найдено.</p>
+                <p class="__result-cons"><span class="__result-cons-text">Создайте свой уникальный товар →</span><span class="__result-cons-link">перейти в Конструктор</span></p>
+            </a>
+        </div>
     </div>
 </div>

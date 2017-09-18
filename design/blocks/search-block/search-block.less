@@ -4,6 +4,10 @@
 
   position: relative;
 
+  &__toggle-btn {
+    display: none;
+  }
+
   &__popular {
     font-size: 1.2rem;
     margin-bottom: 10px;
@@ -167,6 +171,50 @@
       background: none;
       padding-left: 4px;
     }
+  }
+
+  &_xs {
+    position: static;
+
+    @{block}__toggle-btn {
+      display: block;
+      .bg-block("imgs/icon-search-xs.png"; @pos-x: center; @pos-y: center);
+      .size(100%);
+      cursor: pointer;
+    }
+
+    @{block}__popular {
+      display: none;
+    }
+
+    @{block}__toggle-data {
+      position: absolute;
+      display: none;
+      top: 100%;
+      margin-top: -2px;
+      left: -140%;
+      background: #FFF;
+      .box-shadow(-2px 2px 10px #AAA);
+      width: 240%;
+      z-index: 10;
+      padding: 10px;
+    }
+
+    &@{block}_open @{block}__toggle-data {
+      display: block;
+    }
+
+    &@{block}_open @{block}__toggle-btn {
+      background-color: @color1;
+    }
+    
+    @{block}__results {
+      left: 10px;
+      right: 10px;
+      top: auto;
+      width: auto;      
+    }
+
   }
 
 // auto-generated ELEMENTS start (07.09.2017 14:40)

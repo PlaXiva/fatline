@@ -140,7 +140,7 @@
         Media
     */
     
-    @media @xs, @sm, @lg, @xxl {
+    @media @xs, @sm, @md, @lg, @xxl {
         
         & {
             
@@ -152,17 +152,36 @@
 {$sLessModsPlaceholder2}
 }";
 
-        $sJs =
-'$(document).ready(function() {
-    '.str_replace("-", "_", $sBlock).'__bind();
-});
-    
-function '.str_replace("-", "_", $sBlock).'__bind() 
-{
-    
-}';
+        $sJsClass = "";
+        $sJsVar = "";
+        $aParts = explode('-', $sBlock);
+        foreach ($aParts as $pnum => $sPart) {
+            $sJsVar .= ($pnum==0) ? $sPart : ucfirst($sPart);
+            $sJsClass .= ucfirst($sPart);
+        }
 
-        if (!file_exists($sBlockDir.$sBlock.'.html')) {
+        $sJs = <<<JS
+$(document).ready(function() {
+    $sJsVar.init();
+});
+
+function $sJsClass ()
+{
+    Block.apply(this, arguments);
+}
+
+$sJsClass.prototype = Object.create(Block.prototype);
+$sJsClass.prototype.constructor = $sJsClass;
+
+$sJsClass.prototype.init = function() {
+    var _ = this;
+    return this;
+};
+
+var $sJsVar = new $sJsClass('.$sBlock', '$sBlock');
+JS;
+
+   if (!file_exists($sBlockDir.$sBlock.'.html')) {
             file_put_contents($sBlockDir . $sBlock . '.html', $sHtml);
         }
 

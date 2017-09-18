@@ -45,6 +45,8 @@ BlockSearch.prototype.init = function() {
         _.clear();
     });
 
+    _.init_open_hide();
+
     return true;
 };
 
@@ -62,24 +64,6 @@ BlockSearch.prototype.setResult = function (sRes) {
     this.getElem('results').addClass(this.be('results_on')).html(sRes);
     this.getElem('input').removeClass(this.be('input_loading'));
     return true;
-};
-
-BlockSearch.prototype.setId = function() {
-    var _ = this;
-
-    _.getBlock(':not([id])').each(function(idx, el) {
-
-        var id;
-        var cnt = idx;
-        do {
-            id = _.block + cnt;
-            cnt++;
-        }
-        while (_.getBlock('[id="'+id+'"]').length>0);
-
-        $(el).attr('id', id);
-    });
-
 };
 
 var blockSearch = new BlockSearch('.search-block');
