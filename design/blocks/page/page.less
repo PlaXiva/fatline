@@ -1,0 +1,62 @@
+.page {
+  @block: ~".page";
+
+  background: #FFF;
+  font-size: 1.4rem;
+  font-family: Ubuntu, Arial, Tahoma, sans-serif;
+  color: @font-color;
+
+  &__header {
+
+  }
+
+  &__content {
+    min-height: 400px;
+  }
+
+  &__footer {
+
+  }
+
+  &__css-test, &__css-create {
+    position: fixed;
+    border: 1px solid #CCC;
+    padding: 7px;
+    background: #FFF;
+    .border-radius(4px);
+    left: 10px;
+    top: 0;
+    z-index: 1000;
+  }
+
+  &__css-create {
+    left: 90px;
+  }
+
+  &__overlay {
+    display: none;
+    z-index: 101;
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    .size(100%);
+    background: @overlay;
+  }
+
+  // modificators
+  &_overlay {
+    @{block}__overlay {
+      display: block;
+    }
+  }
+
+  @media @xs, @sm {
+    &__css-test, &__css-create {
+      display: none;
+    }
+  }
+
+
+// auto-generated ELEMENTS stop
+
+}

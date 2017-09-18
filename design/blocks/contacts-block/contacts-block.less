@@ -1,0 +1,64 @@
+.contacts-block {
+    @block: ~".contacts-block";
+
+    font-weight: lighter;
+    color: #FFF;
+
+    &__title {
+        font-size: 2.0rem;
+        margin-bottom: 15px;
+    }
+    
+    &__phones {
+        padding-left: 24px;
+        .bg-block("phone.png"; @pos-y:4px);
+        margin-bottom: 20px;
+    }
+    
+    &__phone, &__phone:hover {
+        display: block;
+        color: #FFF;
+        margin-bottom: 10px;
+        font-size: 1.6rem;
+    }
+
+    &__emails {
+        padding-left: 24px;
+        .bg-block("mail.png"; @pos-y:4px);
+        margin-bottom: 20px;
+    }
+    
+    &__email, &__email:hover {
+        display: block;
+        color: #FFF;
+        font-size: 1.6rem;
+    }
+    
+    &__socials {
+        .v-middle();
+    }
+    
+    &__fb {
+        .bg-block("fb.png");
+        .size(30px);
+        display: inline-block;
+        margin-right: 4px;
+    }
+    
+    &__ig {
+        .bg-block("ig.png");
+        .size(30px);
+        display: inline-block;
+        margin-right: 4px;
+    }
+    
+    &__join {
+        color: #FFF;
+        .bg-block("icon-arrow.png"; @pos-y: center);
+        padding-left: 12px;
+        display: inline-block;
+    }
+    
+// auto-generated ELEMENTS stop
+
+}

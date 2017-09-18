@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteBase /design
+
+RewriteCond %{REQUEST_URI} ^.*\.php$ [OR]
+RewriteCond %{REQUEST_URI} ^.*\.html$
+RewriteRule .* index.php

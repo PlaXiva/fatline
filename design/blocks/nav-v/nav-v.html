@@ -1,0 +1,43 @@
+<nav class="{$class}">
+
+    <?php if ($param == 'Информация') {  ?>
+    <p class="nav-v__title">{$param}</p>
+    <ul class="nav-v__list">
+        <li class="nav-v__item"><a href="" class="nav-v__link">Доставка</a></li>
+        <li class="nav-v__item"><a href="" class="nav-v__link">Способы оплаты</a></li>
+        <li class="nav-v__item"><a href="" class="nav-v__link">Обмен и возврат</a></li>
+        <li class="nav-v__item"><a href="" class="nav-v__link">Статус заказа</a></li>      
+    </ul>
+
+    <?php } elseif ($param == 'О нас') {  ?>
+    <p class="nav-v__title">{$param}</p>
+    <ul class="nav-v__list">
+        <li class="nav-v__item"><a href="" class="nav-v__link">Отзывы</a></li>
+        <li class="nav-v__item"><a href="" class="nav-v__link">ЧаВо</a></li>
+        <li class="nav-v__item"><a href="" class="nav-v__link">Блог</a></li>
+        <li class="nav-v__item"><a href="" class="nav-v__link">Контакты</a></li>        
+    </ul>
+
+    <?php } elseif ($param == 'Заголовок') {  ?>
+    <p class="nav-v__title">{$param}</p>
+    <ul class="nav-v__list">
+        <li class="nav-v__item"><a href="" class="nav-v__link">Размеры</a></li>
+        <li class="nav-v__item"><a href="" class="nav-v__link">Прямая печать</a></li>
+        <li class="nav-v__item"><a href="" class="nav-v__link">Конструктор</a></li>
+    </ul>
+
+    <?php } elseif ($param == 'Сотрудничество') {  ?>
+    <p class="nav-v__title">{$param}</p>
+    <ul class="nav-v__list">
+        <li class="nav-v__item"><a href="" class="nav-v__link">Оптовым клиентам</a></li>
+        <li class="nav-v__item"><a href="" class="nav-v__link">Дизайнерам</a></li>
+        <li class="nav-v__item"><a href="" class="nav-v__link">Партнерская программа</a></li>        
+    </ul>
+
+    <?php } else {  ?>
+    <p class="nav-v__title">{$param}</p>
+    <ul class="nav-v__list">
+    </ul>
+    <?php } ?>
+</nav>
+

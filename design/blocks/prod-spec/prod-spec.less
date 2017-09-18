@@ -1,0 +1,45 @@
+.prod-spec {
+  @block: ~".prod-spec";
+  position: relative;
+  display: block;
+
+  &__label {
+    display: block;
+    position: absolute;
+    top: 0px;
+    left: 10px;
+    z-index: 3;
+
+    &_new {
+      .bg('label-new.png');
+      .size(65px, 24px);
+    }
+  }
+
+  &__title {
+    margin: 10px 0;
+  }
+
+  &__pic {
+    .v-middle();
+    height: 150px;
+  }
+
+  &__img {
+    .img-resp();
+  }
+
+  &__rating {
+    margin-top: 10px;
+  }
+
+  &__link {
+    color: fade(@font-color, 80%);
+  }
+
+  &__price {
+    font-weight: bold;
+    font-size: 1.8rem;
+    color: @link-color;
+  }
+}

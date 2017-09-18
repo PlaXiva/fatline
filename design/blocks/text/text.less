@@ -1,0 +1,108 @@
+.text {
+    @block: ~".text";
+    // not allowed outer geometry for block (margin, width, height, position: absolute, fixed)
+    
+    &__title {
+        font-size: 2.4rem;
+        font-weight: normal;
+    }
+    
+    p {
+        margin: 10px 0;
+    }
+
+    &__spoiler {
+        //height: 320px;
+        //.background-image(linear-gradient(to top, #CCC 0%, #FFF 10%));
+        position: relative;
+        overflow: hidden;
+    }
+
+    &__switch {
+        text-align: right;
+        display: none;
+        padding: 10px 0;
+
+    }
+
+    &__more {
+        cursor: pointer;
+        font-weight: bold;
+
+        &::before {
+            content: "↓";
+            font-weight: bold;
+        }
+    }
+
+    &__less {
+        cursor: pointer;
+        font-weight: bold;
+
+        &::before {
+            content: "↑";
+            font-weight: bold;
+        }
+
+    }
+
+    /* 
+        Modifiers 
+    */
+
+    &_short {
+
+        @{block}__switch {
+            display: block;
+        }
+
+        @{block}__spoiler::after {
+            content: "";
+            display: block;
+            position: absolute;
+            bottom: 0;
+            right: 0;
+            left: 0;
+            height: 4em;
+            z-index: 1;
+            .background-image(linear-gradient(top, rgba(255, 255, 255, 0) 0%, #fff 100%));
+        }
+
+        @{block}__less {
+            display: none;
+        }
+    }
+
+    &_full {
+
+        @{block}__switch {
+            display: block;
+        }
+
+        @{block}__more {
+            display: none;
+        }
+    }
+
+    &_light {
+        @{block}__spoiler {
+            color: @color6;
+        }
+    }
+
+    /*
+        Media
+    */
+    
+    @media @xs, @sm, @lg, @xxl {
+        
+        & {
+            
+        }
+    }
+    
+// auto-generated ELEMENTS stop
+
+
+// auto-generated MODIFIERS stop
+}

@@ -1,0 +1,97 @@
+.timer {
+    @block: ~".timer";
+    // not allowed outer geometry for block (margin, width, height, position: absolute, fixed)
+
+    display: inline-block;
+
+    &__title {
+        font-size: 1.6rem;
+        margin-right: 4px;
+    }
+
+    &__digits {
+        font-size: 1.8rem;
+    }
+
+    .digit() {
+        background: @color7;
+        font-weight: @medium;
+        .border-radius(4px);
+        display: inline-block;
+        .size(21, 30);
+        text-align: center;
+        .v-middle();
+        margin: 0 2px;
+    }
+
+    &__hour {
+
+    }
+
+    &__hour1 {
+        .digit();
+    }
+
+    &__hour2 {
+        .digit();
+    }
+
+    &__semicolon {
+
+    }
+
+    &__minute {
+
+    }
+
+    &__minute1 {
+        .digit();
+    }
+
+    &__minute2 {
+        .digit();
+    }
+
+    &__second {
+
+    }
+
+    &__second1 {
+        .digit();
+    }
+
+    &__second2 {
+        .digit();
+        margin-right: 0;
+    }
+
+    /* 
+        Modifiers 
+    */
+    
+    &_modifier {
+        
+        @{block}__title {
+            
+        }
+    }
+    
+    /*
+        Media
+    */
+    
+    @media @xs, @sm, @lg, @xxl {
+        
+        & {
+            
+        }
+    }
+    
+// auto-generated ELEMENTS start (11.09.2017 10:25)
+
+
+// auto-generated ELEMENTS stop
+
+
+// auto-generated MODIFIERS stop
+}

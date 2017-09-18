@@ -1,0 +1,60 @@
+.subscribe-block {
+
+    @block: ~".subscribe-block";
+
+    padding: 20px 0;
+
+    &__msg {
+        color: red;
+        margin: 10px 0;
+    }
+
+    &__msg:empty {
+        display: none;
+    }
+    
+    &__form {
+        text-align: center;
+    }
+
+    &__title {
+        display: inline-block;
+        margin: 0 4px;
+        font-size: 1.8rem;
+        font-weight: lighter;
+        vertical-align: middle;
+    }
+
+    &__input-name, &__input-email {
+        display: inline-block;
+        margin: 0 4px;
+        .size(170, 34);
+        padding: 4px 8px;
+        border: 1px solid #CCC;
+        .border-radius(4px);
+        vertical-align: middle;
+    }
+
+    &__button {
+        display: inline-block;
+        margin: 0 4px;
+        .size(150, 34);
+    }
+
+    @media @xs, @sm, @md {
+
+        &__title {
+            display: block;
+            text-align: center;
+        }
+
+        &__input-name, &__input-email, &__button {
+            width: 280px;
+            margin-top: 12px;
+        }
+    }
+
+// auto-generated ELEMENTS stop
+
+
+}

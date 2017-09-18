@@ -1,0 +1,220 @@
+<div class="{$class}">
+    <block class="slider __slider"></block>
+
+    <div class="__constructor">
+        <p class="__constructor-title">Создавайте свой стиль в онлайн-конструкторе товаров!</p>
+
+        <div class="container hidden-xs">
+            <div class="row">
+                <div class="col-xs-12">
+                    <a href="./" class="__constructor-pic-lg"><img src="{$url}imgs/constructor-lg.jpg" width="1200" height="484" alt="" class="__constructor-img-lg"></a>
+                </div>
+            </div>
+        </div>
+
+        <ul class="__constructor-steps visible-xs">
+            <li class="__constructor-step"><span class="__constructor-step-num">1</span><span class="__constructor-step-text">Выберите основу, цвет и размер</span></li>
+            <li class="__constructor-step"><span class="__constructor-step-num">2</span><span class="__constructor-step-text">Загрузите свой рисунок или текст</span></li>
+            <li class="__constructor-step"><span class="__constructor-step-num">3</span><span class="__constructor-step-text">Отправка день в день при заказе до 15:00</span></li>
+        </ul>
+
+        <a href="./" class="__constructor-pic-xs visible-xs"></a>
+    </div>
+
+    <div class="container">
+        <div class="__cats">
+            <p class="__cats-title">Товары</p>
+            <ul class="__cats-list">
+                <li class="__cats-list-item __cats-list-item_active" data-name="man">Мужские</li>
+                <li class="__cats-list-item" data-name="woman">Женские</li>
+                <li class="__cats-list-item" data-name="kids">Детские</li>
+                <li class="__cats-list-item" data-name="others">Аксессуары</li>
+            </ul>
+
+            <?php $aArr = array('man', 'woman', 'kids', 'others'); foreach ($aArr as $sAlias) {  ?>
+            <ul class="__cats-carousel<?php if ($sAlias=='man') print ' __cats-carousel_active'; ?>" data-name="<?php print $sAlias; ?>">
+                <?php $aArr2 = array(1, 2, 3, 4); foreach ($aArr2 as $i) {  ?>
+                <li class="__cats-carousel-item">
+                    <div class="row">
+                        <div class="col-sm-5">
+                            <a href="./category.html" class="__cats-carousel-item-pic"><img class="__cats-carousel-item-img" src="{$url}imgs/cat-img.png" width="1" height="1" alt="Cat title"></a>
+                            <a href="./category.html" class="__cats-carousel-item-title">Стрейчевые футболки (<?php print $sAlias; ?>)</a>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <a href="./category.html" class="__cats-carousel-item-pic"><img class="__cats-carousel-item-img" src="{$url}imgs/cat-img.png" width="1" height="1" alt="Cat title"></a>
+                            <a href="./category.html" class="__cats-carousel-item-title">Футболки</a>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <a href="./category.html" class="__cats-carousel-item-pic"><img class="__cats-carousel-item-img" src="{$url}imgs/cat-img.png" width="1" height="1" alt="Cat title"></a>
+                            <a href="./category.html" class="__cats-carousel-item-title">Снепбеки</a>
+                        </div>
+
+                        <div class="col-sm-2">
+                            <a href="./category.html" class="__cats-carousel-item-pic"><img class="__cats-carousel-item-img" src="{$url}imgs/cat-img.png" width="1" height="1" alt="Cat title"></a>
+                            <a href="./category.html" class="__cats-carousel-item-title">Майки</a>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-sm-2">
+                            <a href="./category.html" class="__cats-carousel-item-pic"><img class="__cats-carousel-item-img" src="{$url}imgs/cat-img.png" width="1" height="1" alt="Cat title"></a>
+                            <a href="./category.html" class="__cats-carousel-item-title">Без рисунков</a>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <a href="./category.html" class="__cats-carousel-item-pic"><img class="__cats-carousel-item-img" src="{$url}imgs/cat-img.png" width="1" height="1" alt="Cat title"></a>
+                            <a href="./category.html" class="__cats-carousel-item-title">Кепки</a>
+                        </div>
+
+                        <div class="col-sm-4">
+                            <a href="./category.html" class="__cats-carousel-item-pic"><img class="__cats-carousel-item-img" src="{$url}imgs/cat-img.png" width="1" height="1" alt="Cat title"></a>
+                            <a href="./category.html" class="__cats-carousel-item-title">Регланы (свитшоты)</a>
+                        </div>
+
+                        <div class="col-sm-3">
+                            <a href="./category.html" class="__cats-carousel-item-pic"><img class="__cats-carousel-item-img" src="{$url}imgs/cat-img.png" width="1" height="1" alt="Cat title"></a>
+                            <a href="./category.html" class="__cats-carousel-item-title">Спортивные футболки</a>
+                        </div>
+                    </div>
+                </li>
+                <?php } ?>
+            </ul>
+            <?php } ?>
+
+        </div>
+    </div><!--cats-->
+
+    <div class="__fionum">
+        <div class="container hidden-xs">
+            <a href="./" class="__fionum-lg">
+                <!--<block class="button __fionum-lg-button" param="Посмотреть все"></block>-->
+            </a>
+        </div>
+
+        <div class="__fionum-xs visible-xs">
+            <p class="__fionum-title">Фамилия и номер</p>
+            <p class="__fionum-descr">Мужские и женские футболки с фамилией и номер, например, с датой первого свидания могут стать прекрасным подарком! </p>
+
+            <a href="./" class="__fionum-pic">
+                <!--<block class="button __fionum-xs-button" param="Посмотреть все"></block>-->
+            </a>
+        </div>
+    </div><!--fionum-->
+    
+    
+    <div class="__themes">
+        <div class="container">
+            <p class="__themes-title">ТОП-5 популярных тем рисунков</p>
+
+            <ul class="grid grid_xs-2 grid_sm-3 grid_md-6">
+                <li class="grid__item __theme">
+                    <a href="" class="__theme-link">
+                        <p class="__theme-pic"><img src="{$url}imgs/theme1.png" alt="" class="__theme-img"></p>
+                        <p class="__theme-title">Игры</p>
+                    </a>
+                </li>
+
+                <li class="grid__item __theme">
+                    <a href="" class="__theme-link">
+                        <p class="__theme-pic"><img src="{$url}imgs/theme2.png" alt="" class="__theme-img"></p>
+                        <p class="__theme-title">Автомобилстам</p>
+                    </a>
+                </li>
+
+                <li class="grid__item __theme">
+                    <a href="" class="__theme-link">
+                        <p class="__theme-pic"><img src="{$url}imgs/theme3.png" alt="" class="__theme-img"></p>
+                        <p class="__theme-title">Игра престолов</p>
+                    </a>
+                </li>
+
+                <li class="grid__item __theme">
+                    <a href="" class="__theme-link">
+                        <p class="__theme-pic"><img src="{$url}imgs/theme4.png" alt="" class="__theme-img"></p>
+                        <p class="__theme-title">Сериалы и кино</p>
+                    </a>
+                </li>
+
+                <li class="grid__item __theme">
+                    <a href="" class="__theme-link">
+                        <p class="__theme-pic"><img src="{$url}imgs/theme5.png" alt="" class="__theme-img"></p>
+                        <p class="__theme-title">Животные</p>
+                    </a>
+                </li>
+
+                <li class="grid__item __theme">
+                    <a href="" class="__theme-link-all">
+                        <p class="__theme-title-all">Посмотреть все темы рисунков</p>
+                    </a>
+                </li>
+
+            </ul>
+        </div>
+    </div><!--themes-->
+
+    <div class="__partners">
+        <div class="container">
+            <p class="__partners-title">Зарабатывай с нами</p>
+            <p class="__partners-descr">Создавай и продавай!</p>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="__partner">
+                        <p class="__partner-title">Дизайнерам</p>
+                        <p class="__partner-descr">Стань одним из авторов FatLine!</p>
+                        <p class="__partner-pic"><img src="{$url}imgs/designer-steps.png" width="250" height="42" class="__partner-img"></p>
+                        <p class="__partner-descr">
+                            Присылайте макеты принтов на нашу почту, мы их правильно размеcтим на 44 основах.
+                            Вжух - и ваш принт продается
+                            в разделе <br>
+                            <a href="./">Авторские принты</a>
+                        </p>
+
+                        <p class="__partner-descr">
+                            Зарабатывайте, занимаясь любимым делом!
+                        </p>
+
+                        <p class="__partner-descr"><block class="button __partner-btn" param="Стать автором"></block></p>
+                    </div>
+                </div>
+
+                <div class="col-md-4 col-lg-6 hidden-xs hidden-sm">
+                    <img src="{$url}imgs/partners-img.png" class="__partners-img"/>
+                </div>
+
+                <div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+                    <div class="__partner">
+                        <p class="__partner-title">Вебмастерам</p>
+                        <p class="__partner-descr">Или станьте нашим партнером!</p>
+                        <p class="__partner-pic"><img src="{$url}imgs/webmaster-steps.png" width="257" height="51" class="__partner-img"></p>
+                        <p class="__partner-descr">
+                            У тебя есть посещаемый проект, сайт или просто группа ВК?
+                        </p>
+                        <p class="__partner-descr">
+                            Просто размещай у себя уникальную ссылку на наш сайт. И при каждом заказе именно твоих пользователей система зачислит 20% от суммы тебе на счет.
+                        </p>
+
+                        <p class="__partner-descr"><block class="button __partner-btn" param="Стать партнером"></block></p>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div><!--partners-->
+
+    <div class="container">
+        <div class="__comments">
+            <p class="__comments-title">Отзывы клиентов</p>
+            <block class="comments-block __comments-block"></block>
+        </div>
+
+        <block class="ag __ag hidden-xs hidden-sm"></block>
+        <block class="text __text hidden-xs"></block>
+        <block class="goroda __goroda hidden-xs"></block>
+    </div>
+
+
+</div><!-- page-home -->

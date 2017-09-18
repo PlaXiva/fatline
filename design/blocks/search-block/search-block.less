@@ -1,0 +1,181 @@
+.search-block {
+
+  @block: ~".search-block";
+
+  position: relative;
+
+  &__popular {
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+    .text-overflow();
+  }
+
+  &__popular-title {
+
+  }
+
+  &__popular-item {
+    margin-left: 10px;
+  }
+
+  &__form {
+    position: relative;
+    border: 4px solid @color6;
+    .size(100%, 54px);
+  }
+
+  &__input {
+    display: block;
+    .size(100%, 46px);
+    border: 0;
+    .bg-block("imgs/icon-search.png"; @pos-x:10px; @pos-y:center);
+    padding: 4px 4px+80px/*button*/+24px/*clear*/ 4px 40px;
+
+    &_loading {
+      .bg-block("imgs/loading.gif"; @pos-x:10px; @pos-y:center);
+    }
+  }
+
+  &__clear {
+    display: none;
+    .bg-block("imgs/clear.png");
+    cursor: pointer;
+    .size(24);
+    position: absolute;
+    right: 85px;
+    top: 50%;
+    margin-top: -12px;
+  }
+
+  &__clear_on {
+
+    display: block;
+  }
+
+  &__button {
+    position: absolute;
+    right: 0;
+    top: 0px;
+    .size(80px, 46px);
+  }
+
+  // results
+  &__results {
+    display: none;
+    position: absolute;
+    width: 100%;
+    top: 100%;
+    left: 0;
+    z-index: 102;
+    background: #FFF;
+    border: 4px solid @color6;
+    border-top: 0;
+  }
+
+  &__results_on {
+    display: block;
+  }
+
+  &__result {
+    padding: 10px;
+    display: block;
+    color: @font-color;
+    font-size: 1.4rem;
+    //border-bottom: 1px solid @color6;
+  }
+
+  &__result:hover {
+    background: @color5;
+    color: #FFF;
+  }
+
+  &__result-theme {
+
+  }
+
+  &__result-theme-search {
+    font-weight: bold;
+  }
+
+  &__result-theme-name {
+    text-decoration: underline;
+  }
+
+  &__result_prod {
+    .display(flex);
+  }
+
+  &__result-prod-pic {
+    width: 60px;
+    text-align: center;
+  }
+
+  &__result-prod-img {
+    .img-resp();
+  }
+
+  &__result-prod-info {
+    width: 100%;
+    padding-left: 10px;
+  }
+
+  &__result-prod-title {
+    font-size: 1.6rem;
+  }
+
+  &__result-prod-price {
+    font-weight: bold;
+    padding-top: 4px;
+  }
+
+  &__result-all {
+
+  }
+
+  &__result_none, &__result_none:hover {
+    background: @color6;
+    color: @font-color;
+  }
+  
+  &__result-none {
+
+  }
+
+  &__result-cons {
+    margin-top: 7px;
+  }
+
+  &__result-cons-text {
+    font-weight: bold;
+    margin-right: 4px;
+  }
+
+  &__result-cons-link {
+    color: @color2;
+  }
+
+  /*
+    Modifiers
+  */
+
+  &_compact {
+    @{block}__popular {
+      display: none;
+    }
+
+    @{block}__input {
+      background: none;
+      padding-left: 4px;
+    }
+  }
+
+// auto-generated ELEMENTS start (07.09.2017 14:40)
+
+  // auto-generated ELEMENTS start (11.09.2017 12:10)
+
+
+    
+// auto-generated ELEMENTS stop
+
+
+}

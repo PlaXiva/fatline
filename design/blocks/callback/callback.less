@@ -1,0 +1,52 @@
+.callback {
+  @block: ~".callback";
+
+  position: relative;
+
+  &__link {
+    display: inline-block;;
+    .bg-block('icon-phone.png'; @pos-y:center);
+    padding-left: 36px;
+    min-height: 32px;
+  }
+
+  &__text {
+    font-size: 1.7rem;
+    text-decoration: underline;
+  }
+
+  &_fixed &__link {
+    background: none;
+    padding-left: 0;
+    min-height: 0;
+  }
+
+  &_fixed &__text {
+    font-size: 1.4rem;
+  }
+
+  &__form {
+    position: absolute;
+    left: 50%;
+    top: 100%;
+    z-index: 2;
+    display: none;
+    background: #FFF;
+    .translate(-50%, 0);
+    margin-top: 15px;
+  }
+
+  &_open &__form {
+    display: block;
+  }
+
+  &_fixed &__form {
+    margin-top: 25px;
+  }
+
+  @media @md {
+    &__text {
+      font-size: 1.5rem;
+    }
+  }
+}

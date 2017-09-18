@@ -1,0 +1,56 @@
+.goroda {
+    @block: ~".goroda";
+    // not allowed outer geometry for block (margin, width, height, position: absolute, fixed)
+    
+    &__title {
+        text-align: center;
+        font-size: 1.8rem;
+        margin-bottom: 20px;
+    }
+
+    &__list {
+        list-style: none;
+        text-align: center;
+    }
+
+    &__item {
+        display: inline-block;
+        margin: 0 4px;
+    }
+
+    &__link, &__link:hover {
+        color: @font-color;
+        text-decoration: none;
+    }
+
+    /* 
+        Modifiers 
+    */
+    
+    &_modifier {
+        
+        @{block}__title {
+            
+        }
+    }
+    
+    /*
+        Media
+    */
+    
+    @media @xs, @sm, @lg, @xxl {
+        
+        & {
+            
+        }
+    }
+    
+// auto-generated ELEMENTS start (13.09.2017 17:20)
+
+
+    
+// auto-generated ELEMENTS stop
+
+
+// auto-generated MODIFIERS stop
+}

@@ -1,0 +1,80 @@
+.comments-block {
+    @block: ~".comments-block";
+    // not allowed outer geometry for block (margin, width, height, position: absolute, fixed)
+
+    &__total {
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    &__total-rate {
+        font-size: 8rem;
+    }
+
+    &__total-rating {
+        margin: 10px 0;
+    }
+
+    &__total-votes {
+        margin-bottom: 10px;
+    }
+
+    &__add-comment {
+
+    }
+
+    &__add-comment-btn {
+        .size(150, 40);
+    }
+
+    &__comment {
+        margin-bottom: 0px;
+    }
+
+    &__rating {
+        margin: 40px 0 10px 0;
+    }
+
+    &__post {
+        margin: 10px 0;
+        font-size: 1.6rem;
+        height: 100px;
+        overflow: hidden;
+    }
+
+    &__user {
+        color: #585858;
+    }
+
+    &__date {
+        color: #585858;
+    }
+
+    /* 
+        Modifiers 
+    */
+    
+    &_modifier {
+        
+        @{block}__title {
+            
+        }
+    }
+    
+    /*
+        Media
+    */
+    
+    @media @xs {
+        &__post {
+            height: auto;
+        }
+    }
+    
+// auto-generated ELEMENTS start (13.09.2017 12:18)
+
+// auto-generated ELEMENTS stop
+
+
+// auto-generated MODIFIERS stop
+}

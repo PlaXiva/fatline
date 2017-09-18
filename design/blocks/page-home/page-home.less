@@ -1,0 +1,363 @@
+.page-home {
+    @block: ~".page-home";
+    // not allowed outer geometry for block (margin, width, height, position: absolute, fixed)
+
+    &__slider {
+
+    }
+
+    // constructor
+    &__constructor {
+
+    }
+
+    &__constructor-title {
+        text-align: center;
+        font-size: 3rem;
+        margin: 20px 0;
+    }
+
+    &__constructor-pic-lg {
+        text-align: center;
+        display: block;
+    }
+
+    &__constructor-img-lg {
+        .img-resp();
+    }
+
+    &__constructor-steps {
+        list-style: none;
+    }
+
+    &__constructor-step {
+        list-style: none;
+        margin: 20px auto;
+        max-width: 175px;
+        .display(flex);
+    }
+
+    &__constructor-step-num {
+        color: @color2;
+        background: @color3;
+        display: inline-block;
+        .size(23, 20);
+        .border-radius(20);
+        text-align: center;
+        padding-top: 2px;
+    }
+
+    &__constructor-step-text {
+        padding-left: 10px;
+        margin-top: -2px;
+    }
+
+    &__constructor-pic-xs {
+        text-align: center;
+        display: block;
+        .bg-block("imgs/constructor-xs.png"; @pos-x:center);
+        .background-size(cover);
+        .size(100%, 240);
+    }
+
+    &__constructor-img-xs {
+        .img-resp();
+    }
+
+    // cats
+
+    &__cats {
+        margin-top: 40px;
+        margin-bottom: 20px;
+    }
+
+    &__cats-title {
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    &__cats-list {
+        list-style: none;
+        text-align: right;
+        position: relative;
+        top: -30px;
+    }
+
+    &__cats-list-item {
+        display: inline-block;
+        padding: 6px 12px;
+        margin-left: 10px;
+        font-size: 1.6rem;
+        .border-radius(4);
+        cursor: pointer;
+    }
+
+    &__cats-list-item_active {
+        background: @color3;
+        color: @color1;;
+    }
+
+    &__cats-carousel {
+        display: none;
+
+        .slick-dotted.slick-slider
+        {
+            margin-bottom: 10px;
+        }
+
+        .slick-dots
+        {
+            position: static;
+            text-align: center;
+            padding: 0;
+        }
+
+        .slick-dots li
+        {
+            .size(18);
+            border-radius: 18px;
+            background: #FFF;
+            margin: 0 6px;
+            border: 2px solid @color2;
+        }
+
+        .slick-dots li:hover, .slick-dots li.slick-active {
+            border: 2px solid @color2;
+            background: @color2;
+        }
+
+    }
+
+    &__cats-carousel_active {
+        display: block;
+    }
+
+    &__cats-carousel-item {
+
+    }
+
+    &__cats-carousel-item-pic {
+        display: block;
+        text-align: center;
+        .size(100%, 230);
+    }
+
+    &__cats-carousel-item-img {
+        .img-resp();
+        .size(100%);
+    }
+
+    &__cats-carousel-item-title, &__cats-carousel-item-title:hover {
+        display: block;
+        text-align: center;
+        position: relative;
+        top: -40px;
+        color: @font-color;
+    }
+
+    // Fio Num
+    &__fionum {
+
+    }
+
+    &__fionum-lg {
+        display: block;
+        .bg-block("imgs/fio_num-lg.jpg"; @pos-x:center);
+        .size(100%, 400);
+        text-align: center;
+    }
+
+    &__fionum-lg-button {
+        .size(170, 34);
+    }
+
+    &__fionum-xs {
+        background-color: #e8e8ea;
+        text-align: center;
+        padding-top: 30px;
+    }
+
+    &__fionum-title {
+        font-size: 2.4rem;
+    }
+
+    &__fionum-descr {
+        margin-top: 15px;
+        margin-bottom: 35px;
+        padding: 0 15px;
+    }
+
+    &__fionum-pic {
+        display: block;
+        .bg-block("imgs/fio_num-xs.png"; @pos-x:center);
+        .size(100%, 230);
+        text-align: center;
+    }
+
+    &__fionum-xs-button {
+
+    }
+    
+    // themes
+
+    &__themes {
+        margin: 20px 0;
+    }
+
+    &__theme {
+        margin-bottom: 20px;
+    }
+
+    &__themes-title {
+        font-size: 2.4rem;
+        text-align: center;
+        margin: 20px 0;
+    }
+
+    &__theme-link {
+        display: block;
+        text-align: center;
+    }
+
+    &__theme-pic {
+        .size(100%, 170);
+        .v-middle();
+    }
+
+    &__theme-img {
+        .img-resp();
+    }
+
+    &__theme-title {
+        color: @font-color;
+        margin-top: 10px;
+    }
+
+    &__theme-link-all {
+        display: block;
+        .bg-block("imgs/themes-all.png"; @pos-x: center; @pos-y: center);
+        .size(100%);
+        max-width: 170px;
+        max-height: 170px;
+        .background-size(contain);
+        margin: 0 auto;
+    }
+
+    &__theme-title-all {
+        position: relative;
+        top: 30%;
+        width: 80%;
+        text-align: center;
+        margin: 0 auto;
+        color: @color2;
+    }
+    
+    // partners
+
+    &__partners {
+
+    }
+
+    &__partners-title {
+        text-align: center;
+        font-size: 3rem;
+    }
+
+    &__partners-descr {
+        text-align: center;
+        margin: 10px 0;
+        font-size: 1.8rem;
+    }
+
+    &__partner {
+        margin-bottom: 40px;
+    }
+
+    &__partner-title {
+        font-size: 2.4rem;
+        text-align: center;
+    }
+
+    &__partner-descr {
+        margin: 15px 0;
+        text-align: center;
+    }
+
+    &__partner-pic {
+        text-align: center;
+        min-height: 52px;
+    }
+
+    &__partner-img {
+        .img-resp();
+    }
+
+    &__partner-btn {
+        .size(220, 40);
+    }
+
+    &__partners-img {
+        display: block;
+        margin: 0 auto;
+        .img-resp();
+    }
+
+    // comments
+    &__comments {
+        margin: 40px 0;
+    }
+
+    &__comments-title {
+        font-size: 3rem;
+        text-align: center;
+    }
+
+    &__comments-block {
+
+    }
+
+    &__ag {
+        margin-bottom: 20px;
+    }
+
+    &__text {
+
+    }
+
+    &__goroda {
+        margin-bottom: 30px;
+    }
+
+    /* 
+        Modifiers 
+    */
+    
+    &_modifier {
+        
+        @{block}__title {
+
+        }
+
+    }
+    
+    /*
+        Media
+    */
+    
+    @media @xs {
+        &__constructor-title {
+            font-size: 2.4rem;
+        }
+    }
+
+    @media @xs, @sm {
+
+    }
+
+
+    
+
+// auto-generated ELEMENTS stop
+
+// auto-generated MODIFIERS stop
+}

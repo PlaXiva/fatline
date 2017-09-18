@@ -1,0 +1,64 @@
+.mob-apps {
+    @block: ~".mob-apps";
+
+    &__title {
+        color: #FFF;
+        font-size: 1.2rem;
+        height: 40px;
+        .v-middle;
+    }
+    
+    &__android {
+        .bg-block("android.png");
+        .size(129, 40);
+        display: block;
+        .background-size(contain);
+    }
+    
+    &__ios {
+        .bg-block("ios.png");
+        .size(129, 40);
+        display: block;
+        .background-size(contain);
+    }
+    
+    @media @md {
+        &__android, &__ios {
+            width: 100%;
+        }
+    }
+    
+    @media (max-width: 479px) {
+
+        &__list {
+            .flex-wrap(wrap);
+        }
+
+        &__item-title {
+            width: 100% !important;
+        }
+
+        &__title {
+            text-align: center;
+            font-size: 1.6rem;
+            width: 240px;
+            margin: 0 auto 15px auto;
+            height: auto;
+        }
+
+        &__item-android, &__item-ios {
+            width: 50% !important;
+        }
+
+        &__android {
+            margin: 0 auto;
+        }
+
+        &__ios {
+            margin: 0 auto;
+        }
+
+    }
+// auto-generated ELEMENTS stop
+
+}

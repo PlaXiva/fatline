@@ -1,0 +1,89 @@
+@font-face {.font-face(Ubuntu, ~"../fonts/Ubuntu/Ubuntu-L");}
+@font-face {.font-face(Ubuntu, ~"../fonts/Ubuntu/Ubuntu-B", bold);}
+@font-face {.font-face(Ubuntu, ~"../fonts/Ubuntu/Ubuntu-M", 600);}
+@font-face {.font-face(Ubuntu, ~"../fonts/Ubuntu/Ubuntu-LI", normal, italic);}
+@font-face {.font-face(Ubuntu, ~"../fonts/Ubuntu/Ubuntu-L", lighter);}
+@font-face {.font-face(Ubuntu, ~"../fonts/Ubuntu/Ubuntu-LI", lighter, italic);}
+
+html {
+  font-size: 10px;
+}
+
+* {
+  .box-sizing(border-box);
+  margin: 0;
+  padding: 0;
+}
+
+*:focus {
+  outline: 0;
+}
+
+a {
+  color: @link-color;
+  text-decoration: none;
+}
+
+a:hover {
+  color: @link-color-hover;
+  text-decoration: none;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  /* display: none; <- Crashes Chrome on hover */
+  -webkit-appearance: none;
+  margin: 0; /* <-- Apparently some margin are still there even though it's hidden */
+}
+
+input[type=number] {
+  -moz-appearance:textfield;
+}
+
+.loop(@aList; @css; @counter:1) when (@counter <= length(@aList)) {
+  @loop-class: extract(@aList, @counter);
+  @css();
+  .loop(@aList; @css; (@counter + 1));
+}
+
+/*
+  Mixin
+*/
+
+.img-resp() {
+  max-width: 100%;
+  height: auto;
+}
+
+.bg(@img:none; @color:transparent; @repeat:no-repeat; @pos-x:left; @pos-y:top) {
+  background: @color url("@{img-path}@{img}") @repeat @pos-x @pos-y;
+}
+
+.bg-block(@img:none; @color:transparent; @repeat:no-repeat; @pos-x:left; @pos-y:top) {
+  @block-name: replace(@block, ".", "");
+  background: @color url("@{blocks-path}@{block-name}/@{img}") @repeat @pos-x @pos-y;
+}
+
+.text-overflow(@value: ellipsis) {
+  text-overflow: @value;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.v-middle {
+  vertical-align: middle;
+  white-space: nowrap;
+  
+  &::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
+  }
+
+  & > * {
+    display: inline-block;
+    vertical-align: middle;
+    white-space: normal;
+  }
+}

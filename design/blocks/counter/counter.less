@@ -1,0 +1,45 @@
+.counter {
+
+  @block: ~".counter";
+
+  white-space: nowrap;
+  border: 1px solid #CCC;
+
+  &__p, &__m {
+    display: inline-block;
+    font-size: 1.6rem;
+    font-weight: bold;
+    text-align: center;
+    .size(23px, 23px);
+    color: #000;
+    cursor: pointer;
+    vertical-align: top;
+    line-height: 23px;
+  }
+
+  &__p:hover, &__m:hover {
+    color: @color1;
+  }
+
+  &__m {
+  }
+
+  &__data {
+    display: inline-block;
+    .size(30px, 23px);
+    vertical-align: top;
+  }
+
+  &__input {
+    .size(100%, 23px);
+    line-height: 23px;
+    font-size: 1.6rem;
+    text-align: center;
+    display: block;
+    border: 0;
+  }
+
+  @media @lg {
+    display: none;
+  }
+}

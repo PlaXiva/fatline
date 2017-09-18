@@ -1,0 +1,37 @@
+.rating {
+
+  @block: ~".rating";
+
+  &__stars {
+    display: inline-block;
+    .size(105px, 16px);
+    .bg-block("rating.png");
+    vertical-align: top;
+  }
+
+  &_1 &__stars {background-position: -84px top;}
+  &_2 &__stars {background-position: -63px top;}
+  &_3 &__stars {background-position: -42px top;}
+  &_4 &__stars {background-position: -21px top;}
+  &_5 &__stars {background-position:   0px top;}
+
+// auto-generated MODIFIERS start (13.09.2017 12:18)
+
+    &_lg {
+
+      @{block}__stars {
+        .size(135px, 21px);
+        .bg-block("rating_lg.png");
+      }
+
+      &@{block}_1 &__stars {background-position: -108px top;}
+      &@{block}_2 &__stars {background-position: -81px top;}
+      &@{block}_3 &__stars {background-position: -54px top;}
+      &@{block}_4 &__stars {background-position: -27px top;}
+      &@{block}_5 &__stars {background-position:   0px top;}
+
+    }
+    
+// auto-generated MODIFIERS stop
+
+}
