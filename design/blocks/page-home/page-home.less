@@ -86,7 +86,7 @@
     &__cats-list-item {
         display: inline-block;
         padding: 6px 12px;
-        margin-left: 10px;
+        margin-left: 0px;
         font-size: 1.6rem;
         .border-radius(4);
         cursor: pointer;
@@ -351,7 +351,16 @@
     }
 
     @media @xs, @sm {
+        &__cats-list {
+            position: static;
+            margin: 10px 0;
+            text-align: center;
+        }
 
+        &__cats-list-item {
+            width: 120px;
+            margin: 4px 10px;
+        }
     }
 
 

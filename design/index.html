@@ -52,13 +52,15 @@
 
 <header class="header page__header">
 
-    <div class="header__static hidden-xs">
+    <div class="header__banner">
+        <div class="header__banner-bg-small visible-xs"><img src="blocks/header/banner_ru_small.png" width="596" height="45" alt=""></div>
 
-        <div class="header__banner">
-            <div class="container">
-                <block class="timer header__mix-timer"></block>
-            </div>
+        <div class="container">
+            <block class="timer header__timer"></block>
         </div>
+    </div>
+
+    <div class="header__static hidden-xs hidden-sm">
 
         <div class="header__line1">
             <div class="container">
@@ -102,7 +104,7 @@
 
     </div><!-- header__static -->
     
-    <div class="header__fixed hidden-xs">
+    <div class="header__fixed hidden-xs hidden-sm">
         <div class="container">
             <div class="row">
                 <div class="col-md-1">
@@ -125,7 +127,7 @@
         </div><!-- container -->
     </div><!-- header__fixed -->
 
-    <div class="header__xs visible-xs">
+    <div class="header__xs visible-xs visible-sm">
         <div class="container">
             <div class="row">
                 <div class="col-xs-5">
@@ -186,26 +188,28 @@
     <div class="footer__line2">
         <div class="container">
             <div class="row">
-                <div class="col-md-9">
+                <div class="col-sm-9 col-md-9">
                     <div class="row">
-                        <div class="col-md-3">
+                        <div class="col-sm-6 col-md-3">
                             <block class="nav-v footer__nav-v" param="Информация"></block>
                         </div>
 
-                        <div class="col-md-3">
+                        <div class="col-sm-6 col-md-3">
                             <block class="nav-v footer__nav-v" param="О нас"></block>
                         </div>
 
-                        <div class="col-md-3">
+                        <div class="clearfix visible-sm"></div>
+
+                        <div class="col-sm-6 col-md-3">
                             <block class="nav-v footer__nav-v" param="Заголовок"></block>
                         </div>
 
-                        <div class="col-md-3">
+                        <div class="col-sm-6 col-md-3">
                             <block class="nav-v footer__nav-v" param="Сотрудничество"></block>
                         </div>
                     </div>
 
-                    <div class="row hidden-xs">
+                    <div class="row hidden-xs hidden-sm">
                         <div class="col-md-6">
                             <block class="visa footer__visa"></block>
                         </div>
@@ -216,18 +220,18 @@
                     </div>
                 </div>
 
-                <div class="col-md-3">
+                <div class="col-sm-3 col-md-3">
                     <block class="contacts-block footer__contacts-block"></block>
                 </div>
 
             </div>
 
-            <div class="row visible-xs">
-                <div class="col-xs-12">
+            <div class="row visible-xs visible-sm">
+                <div class="col-xs-12 col-sm-7">
                     <block class="mob-apps footer__mob-apps"></block>
                 </div>
 
-                <div class="col-xs-12">
+                <div class="col-xs-12 col-sm-5">
                     <block class="visa footer__visa"></block>
                 </div>
 

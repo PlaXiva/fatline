@@ -12,7 +12,7 @@ $(document).ready(function() {
 });
 
 function header__scroll() {
-    if ($(window).scrollTop() > $('.header__static').height()) {
+    if ($(window).scrollTop() > $('.header__static').height()+$('.header__banner').height()) {
         //$('.header__static').fadeOut();
         $('.header__fixed').fadeIn();
         //$('.header').removeClass('header_static').addClass('header_fixed');

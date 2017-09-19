@@ -12,7 +12,7 @@
     text-align: right;
   }
 
-  &__mix-timer {
+  &__timer {
     margin: 7px 0;
   }
 
@@ -135,7 +135,29 @@
     &__fixed {
       display: none !important;
     }
+
+    &__banner {
+      background: none;
+      height: auto;
+      text-align: center;
+    }
+
+    &__banner-bg-small {
+      background: @color7;
+
+      img {
+        .img-resp();
+      }
+    }
+
   }
+
+  @media @sm {
+    &__banner {
+      background-position: 51.5% top;
+    }
+  }
+
 // auto-generated ELEMENTS start (07.09.2017 17:02)
 
     &__search-block {
